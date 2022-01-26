@@ -35,41 +35,43 @@ const UserProfileMenu = ({ userName, userImage, userAccountType }) => {
   };
 
   return (
-    <div className={classes['user-profile']}>
-      <div className={classes['user-profile__info']}>
-        <div className={classes['user-profile__info__avatar']}>
-          <img src={userImage} alt='avatar' />
-        </div>
-        <div className={classes['user-profile__info__name']}>{userName}</div>
-        <div className={classes['user-profile__info__account-type']}>
-          Home {userAccountType}
-        </div>
-        <Button className={classes['user-profile__info__edit']}>
-          Edit profile
-        </Button>
+    <div className={`${classes['user-profile']} no-visible-scrollbar`}>
+      <div className={classes['avatar']}>
+        <img src={userImage} alt='avatar' />
       </div>
-      <ul className={classes['user-profile__links']}>
-        {routes.map((route, index) => (
-          <li key={index} className={classes['user-profile__link']}>
-            <NavLink to={route.link}>
-              <span className={classes['user-profile__link-text']}>
-                {route.title}
-              </span>
-              <span>{route.icon}</span>
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-      <div className={classes['copy-link']}>
-        <p>Profile link</p>
-        <div>
-          <span>https://www.udewell.com</span>
-          <span
-            className={classes['copy-link__control']}
-            onClick={linkCopyHandler}
-          >
-            <CopySvg />
-          </span>
+      <div>
+        <div className={classes['user-profile__info']}>
+          <div className={classes['user-profile__info__name']}>{userName}</div>
+          <div className={classes['user-profile__info__account-type']}>
+            Home {userAccountType}
+          </div>
+          <Button className={classes['user-profile__info__edit']}>
+            Edit profile
+          </Button>
+        </div>
+        <ul className={classes['user-profile__links']}>
+          {routes.map((route, index) => (
+            <li key={index} className={classes['user-profile__link']}>
+              <NavLink to={route.link}>
+                <span className={classes['user-profile__link-text']}>
+                  {route.title}
+                </span>
+                <span>{route.icon}</span>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+        <div className={classes['copy-link']}>
+          <p>Profile link</p>
+          <div>
+            <span>https://www.udewell.com</span>
+            <span
+              className={classes['copy-link__control']}
+              onClick={linkCopyHandler}
+            >
+              <CopySvg />
+            </span>
+          </div>
         </div>
       </div>
     </div>

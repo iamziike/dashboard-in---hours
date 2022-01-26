@@ -4,3 +4,14 @@
   gap: var(--vertical-padding);
   padding: var(--vertical-padding) 50px;
 }
+
+.main > * {
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .main {
+    gap: 10px;
+    padding: var(--vertical-padding) 10px;
+  }
+}

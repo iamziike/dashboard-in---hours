@@ -4,28 +4,28 @@
   padding: var(--vertical-padding);
 }
 
-.user-profile__info {
-  display: grid;
-  gap: 5px;
-  text-align: center;
-  margin-bottom: var(--vertical-padding);
-}
-
-.user-profile__info__avatar {
+.avatar {
   position: relative;
   width: max-content;
   margin: 0 auto;
 }
 
-.user-profile__info__avatar img {
+.avatar img {
   width: 100%;
 }
 
-.user-profile__info__avatar::before {
+.avatar::before {
   content: url('../../assets/images/camera.svg');
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.user-profile__info {
+  display: grid;
+  gap: 5px;
+  text-align: center;
+  margin-bottom: var(--vertical-padding);
 }
 
 .user-profile__info__name {
@@ -103,9 +103,10 @@
 @media (max-width: 1100px) {
   .user-profile {
     width: max-content;
+    height: max-content;
   }
 
-  .user-profile__info__avatar {
+  .avatar {
     width: 60px;
     margin: 0 auto;
   }
@@ -116,7 +117,7 @@
     margin: 0 auto;
   }
 
-  .user-profile__info > *:not(.user-profile__info__avatar),
+  .user-profile__info > *:not(.avatar),
   .user-profile__link-text,
   .copy-link span:nth-child(1) {
     display: none;
@@ -138,5 +139,28 @@
   .copy-link__control::after {
     top: 100%;
     bottom: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-profile {
+    height: 100%;
+    min-width: 40px;
+    padding: 0px;
+  }
+
+  .user-profile__link {
+    padding: 10px 0;
+  }
+
+  .avatar,
+  .avatar::before,
+  .copy-link {
+    display: none;
+  }
+
+  .user-profile svg {
+    width: 30px;
+    padding: 0;
   }
 }
