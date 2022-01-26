@@ -17,7 +17,7 @@ const Header = () => {
   const locationAddHandler = (value) => {
     const location = { id: Math.random(), value };
     setLocation((prev) => {
-      if (prev.length < 2 && value.length < 5) return [...prev, location];
+      if (value.length > 3) return [...prev, location];
       return prev;
     });
   };

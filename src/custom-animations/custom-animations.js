@@ -1,7 +1,8 @@
 export const dragOut = {
   variants: {
-    hidden: { x: '-100vh' },
+    hidden: { opacity: 0, x: '100vh' },
     visible: {
+      opacity: 1,
       x: 0,
       transition: {
         duration: 0.1,

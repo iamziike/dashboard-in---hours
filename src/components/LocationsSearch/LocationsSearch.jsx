@@ -44,7 +44,9 @@ const LocationsSearch = ({
       className={`${className} ${classes['locations-search']}`}
       onSubmit={submitHandler}
     >
-      <ul className={classes['locations-search__output-wrapper']}>
+      <ul
+        className={`${classes['locations-search__output-wrapper']} no-visible-scrollbar`}
+      >
         {locationsStyled}
       </ul>
       <input
