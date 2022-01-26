@@ -1,0 +1,142 @@
+.user-profile {
+  background-color: var(--alt-bg);
+  color: var(--alt-color-2);
+  padding: var(--vertical-padding);
+}
+
+.user-profile__info {
+  display: grid;
+  gap: 5px;
+  text-align: center;
+  margin-bottom: var(--vertical-padding);
+}
+
+.user-profile__info__avatar {
+  position: relative;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.user-profile__info__avatar img {
+  width: 100%;
+}
+
+.user-profile__info__avatar::before {
+  content: url('../../assets/images/camera.svg');
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.user-profile__info__name {
+  color: var(--alt-color-1);
+}
+
+.user-profile__info__account-type {
+  color: var(--alt-color-3);
+}
+
+.user-profile__info button {
+  margin: 0 auto;
+}
+
+.user-profile__link {
+  padding: 10px;
+  border: solid var(--alt-color-3);
+  border-width: 1px 0 0 0;
+}
+
+.user-profile__link a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-profile__link:last-child {
+  border-bottom-width: 1px;
+}
+
+.copy-link {
+  margin-top: calc(var(--vertical-padding) * 2);
+  opacity: 0.7;
+}
+
+.copy-link div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--alt-color-3);
+  border: solid 1px;
+  padding-left: calc(var(--vertical-padding) / 4);
+  border-radius: var(--default-radius);
+}
+
+.copy-link span:nth-child(1) {
+  color: var(--alt-color-5);
+  opacity: 0.6;
+}
+
+.copy-link__control {
+  position: relative;
+  cursor: pointer;
+  border-left: solid 1px;
+  padding: calc(var(--vertical-padding) / 4);
+}
+
+.copy-link__control::after {
+  content: 'Copy link';
+  font-size: 80%;
+  position: absolute;
+  width: max-content;
+  bottom: 100%;
+  right: 0;
+  background-color: main;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.copy-link__control:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+  .user-profile {
+    width: max-content;
+  }
+
+  .user-profile__info__avatar {
+    width: 60px;
+    margin: 0 auto;
+  }
+
+  .user-profile__link {
+    width: max-content;
+    border: 0;
+    margin: 0 auto;
+  }
+
+  .user-profile__info > *:not(.user-profile__info__avatar),
+  .user-profile__link-text,
+  .copy-link span:nth-child(1) {
+    display: none;
+  }
+
+  .copy-link {
+    text-align: center;
+  }
+
+  .copy-link div {
+    margin: 10px auto;
+    width: max-content;
+  }
+
+  .copy-link__control {
+    border-left: 0;
+  }
+
+  .copy-link__control::after {
+    top: 100%;
+    bottom: auto;
+  }
+}

@@ -1,0 +1,65 @@
+.header {
+  --locations-search-padding: var(--tiny-padding);
+  --locations-search-bg: var(--lighter-grey);
+  --locations-search-output-bg: var(--light-grey);
+  --locations-search-border-radius: var(--default-radius);
+
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 100px;
+  justify-content: space-between;
+  background-color: var(--alt-bg);
+  color: var(--alt-color-1);
+  padding: calc(var(--vertical-padding) / 2) var(--horizontal-padding);
+}
+
+.header > * {
+  margin-left: auto;
+}
+
+.header__location-search {
+  order: 1;
+}
+
+.nav {
+  order: 2;
+  position: relative;
+  height: 100%;
+  padding: var(--tiny-padding);
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.nav__links {
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.nav__link {
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.5s;
+}
+
+.nav__link:hover {
+  opacity: 0.6;
+}
+
+.header__control {
+  display: flex;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.header__control svg * {
+  fill: currentColor;
+}

@@ -1,0 +1,17 @@
+/* these variables ie)--btn-color do not exist upon creation of this class the component making use of it will declare its variables or else it defaults*/
+
+.btn {
+  color: var(--btn-color, var(--white));
+  background-color: var(--btn-bg, var(--alt-color-5));
+  border: solid 2px var(--btn-bg, var(--alt-color-5));
+  padding: var(--btn-padding, 10px 20px);
+  border-radius: var(--btn-border-radius, 5px);
+  width: var(--btn-width, max-content);
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--btn-bg, var(--alt-color-5));
+  background-color: transparent;
+}

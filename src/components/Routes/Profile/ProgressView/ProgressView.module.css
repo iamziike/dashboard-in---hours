@@ -1,0 +1,46 @@
+.progress-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'title descr'
+    'counter increase'
+    'progress-chart progress-chart';
+  height: max-content;
+  gap: 15px;
+  align-items: center;
+  color: var(--alt-color-2);
+  border-radius: 5px;
+}
+
+.title {
+  grid-area: title;
+  font-weight: 600;
+}
+
+.descr {
+  grid-area: descr;
+  text-align: end;
+  color: var(--alt-color-3);
+}
+
+.counter {
+  grid-area: counter;
+  font-size: var(--fs-large);
+  color: var(--alt-color-1);
+}
+
+.increase {
+  text-align: end;
+  grid-area: increase;
+  color: var(--increase-color);
+}
+
+.progress-chart {
+  grid-area: progress-chart;
+}
+
+.yearly-goal {
+  margin-top: 12px;
+  font-size: var(--fs-small);
+  color: var(--alt-color-3);
+}

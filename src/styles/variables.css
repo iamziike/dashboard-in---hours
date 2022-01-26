@@ -1,0 +1,63 @@
+/* Airbnb Cereal App font */
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600&display=swap'); */
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --greenish-cyan: hsl(168, 98%, 20%);
+  --green: hsl(128, 53%, 44%);
+  --orange: hsl(24, 100%, 60%);
+  --black: hsl(0, 0%, 10%);
+  --light-black: hsl(225, 3%, 25%);
+  --mercury: hsl(0, 0%, 97%); /* main bg */
+  --light-grey: hsl(0, 0%, 91%);
+  --lighter-grey: hsl(0, 0%, 96%);
+  --dark-grey: hsl(223, 4%, 63%);
+
+  /* layouts */
+  --horizontal-padding: 200px;
+  --vertical-padding: 20px;
+  --tiny-padding: 5px 10px;
+
+  /* radius */
+  --default-radius: 4px;
+
+  /* fonts */
+  --fs-tiny: 0.6rem;
+  --fs-small: 0.8rem;
+  --fs-reg: 1rem;
+  --fs-med: 1.5rem;
+  --fs-large: 2rem;
+
+  --nunito-ff: Nunito_Sans;
+  --ff-reg: var(--nunito-ff);
+
+  /* Theming */
+  --main-bg: var(--mercury);
+  --main-color-1: var(--black);
+  --main-color-2: var(--dark-grey);
+
+  --alt-bg: var(--white);
+  --alt-color-1: var(--main-color-1);
+  --alt-color-2: var(--light-black);
+  --alt-color-3: var(--dark-grey);
+  --alt-color-4: var(--green);
+  --alt-color-5: var(--greenish-cyan);
+  --alt-color-6: var(--orange);
+
+  /* components */
+  /* locationSearchField component */
+}
+
+@media (max-width: 1080px) {
+  :root {
+    /* layouts */
+    --horizontal-padding: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    /* layouts */
+    --horizontal-padding: 50px;
+  }
+}

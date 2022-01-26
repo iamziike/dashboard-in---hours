@@ -1,0 +1,25 @@
+.graph-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.graph-view__header {
+  padding: var(--vertical-padding);
+  display: flex;
+  justify-content: space-between;
+}
+
+.graph-view__title {
+  color: var(--alt-color-2);
+  font-size: var(--fs-med);
+}
+
+.graph-view__main {
+  text-align: center;
+  padding: 0 var(--vertical-padding) var(--vertical-padding);
+}
+
+.graph-view__main img {
+  max-width: 100%;
+}

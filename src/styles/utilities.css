@@ -1,0 +1,22 @@
+.default-padding {
+  padding: var(--vertical-padding) var(--horizontal-padding);
+}
+
+.default-radius {
+  border-radius: var(--default-radius);
+}
+
+.no-visible-scrollbar {
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* Internet-Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.others {
+  font-size: var(--fs-tiny);
+  color: var(--alt-color-3);
+}

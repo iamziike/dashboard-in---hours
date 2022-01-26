@@ -1,0 +1,82 @@
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--vertical-padding);
+  grid-template-areas:
+    'sales-progress revenue-progress clients-progress'
+    'total-sales daily-profit daily-profit'
+    'daily-active-clients daily-active-clients user-onboarding';
+  padding: var(--vertical-padding);
+  background-color: var(--alt-bg);
+  white-space: nowrap;
+}
+
+.profile > * {
+  box-shadow: 0px 0px 1px 1px hsla(0, 0%, 0%, 0.208);
+}
+
+.sales {
+  --increase-color: var(--alt-color-5);
+  grid-area: sales-progress;
+}
+
+.revenue {
+  --increase-color: var(--alt-color-6);
+  grid-area: revenue-progress;
+}
+
+.clients {
+  --increase-color: var(--alt-color-5);
+  grid-area: clients-progress;
+}
+
+.sales,
+.revenue,
+.clients {
+  padding: var(--vertical-padding);
+}
+
+.total-sales {
+  --icon-bg: var(--alt-color-5);
+  --icon-border-radius: var(--default-radius);
+  grid-area: total-sales;
+}
+
+.daily-profit {
+  grid-area: daily-profit;
+}
+
+.daily-active-clients {
+  grid-area: daily-active-clients;
+}
+
+.user-onboarding {
+  --icon-bg: var(--alt-color-6);
+  --icon-border-radius: var(--default-radius);
+  grid-area: user-onboarding;
+}
+
+@media (max-width: 1300px) {
+  .profile {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'revenue-progress revenue-progress'
+      'daily-profit sales-progress'
+      'daily-active-clients clients-progress'
+      'total-sales user-onboarding';
+  }
+}
+
+@media (max-width: 1300px) {
+  .profile {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'revenue-progress'
+      'sales-progress'
+      'daily-profit'
+      'total-sales'
+      'daily-active-clients'
+      'clients-progress'
+      'user-onboarding';
+  }
+}

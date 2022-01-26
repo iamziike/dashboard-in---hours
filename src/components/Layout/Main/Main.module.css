@@ -1,0 +1,6 @@
+.main {
+  display: flex;
+  justify-content: center;
+  gap: var(--vertical-padding);
+  padding: var(--vertical-padding) 50px;
+}

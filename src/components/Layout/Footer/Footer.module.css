@@ -1,0 +1,156 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  grid-template-areas:
+    'about support address'
+    'about support socials'
+    'endNote endNote endNote';
+  word-spacing: 110%;
+  color: var(--main-color-2);
+}
+
+@media (max-width: 900px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'about support'
+      'about support'
+      'address address'
+      'socials socials'
+      'endNote endNote';
+    gap: 30px 10px;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'about'
+      'support'
+      'address'
+      'socials'
+      'endNote';
+    gap: 30px 10px;
+  }
+}
+
+.footer h2 {
+  color: var(--main-color-1);
+}
+
+.footer__about-section {
+  grid-area: about;
+}
+
+.footer__support-section {
+  grid-area: support;
+}
+
+.footer__address-section {
+  grid-area: address;
+  white-space: nowrap;
+}
+
+.footer__about-section,
+.footer__support-section,
+.footer__address-section {
+  display: grid;
+  align-content: flex-start;
+  gap: 10px;
+}
+
+.footer__link {
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.footer__link:hover {
+  color: var(--main-color-1);
+}
+
+.socials {
+  grid-area: socials;
+  display: flex;
+  gap: 30px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.249),
+    -3px -3px 3px rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.social:nth-child(odd) {
+  background-color: var(--alt-bg);
+}
+
+.social:nth-child(odd) svg * {
+  fill: var(--alt-color-5);
+}
+
+.social:nth-child(even) {
+  background-color: var(--alt-color-5);
+}
+
+.social:nth-child(even) svg * {
+  background-color: var(--alt-bg);
+}
+
+.footer__end-note {
+  grid-area: endNote;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer__end-note > *:nth-child(even) {
+  position: relative;
+  padding: 0 20px;
+}
+
+.footer__end-note > *:nth-child(even)::before,
+.footer__end-note > *:nth-child(even)::after {
+  content: '';
+  padding: 2px;
+  top: calc(50% - 2px);
+  position: absolute;
+  background-color: currentColor;
+  border-radius: 100%;
+  opacity: 0.5;
+}
+
+.footer__end-note > *:nth-child(even)::after {
+  left: 0;
+}
+
+.footer__end-note > *:nth-child(even)::before {
+  right: 0;
+}
+
+@media (max-width: 700px) {
+  .footer__end-note {
+    flex-direction: column;
+  }
+
+  .footer__end-note > *:nth-child(1) {
+    order: 3;
+  }
+
+  .footer__end-note > *:nth-child(2) {
+    order: 2;
+  }
+
+  .footer__end-note > *:nth-child(3) {
+    order: 1;
+  }
+}

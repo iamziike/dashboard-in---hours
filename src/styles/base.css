@@ -1,0 +1,10 @@
+*::selection {
+  background-color: var(--main-color-1);
+  color: var(--main-bg);
+}
+
+body {
+  font-family: var(--ff-reg, Cambria, serif);
+  font-size: var(--fs-reg);
+  background-color: var(--main-bg);
+}
